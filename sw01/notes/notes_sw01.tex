@@ -1,0 +1,29 @@
+\documentclass[a4,paper]{article}
+
+\usepackage{../../layout/layout}
+
+\title{Notizen DSVB -- SW01}
+\date{\today}
+\author{Daniel Winz}
+
+\begin{document}
+    \maketitle
+    \clearpage
+    \section{Übergang Analog $\to$ Digital}
+    \[ x(t) = \sin(\omega\cdot t) \]
+    \[ x[n] = \sin(2 \pi \cdot f \cdot n \cdot T_s) \]
+    \begin{table}[h!]
+        \centering
+        \begin{zebratabular}{llll}
+            \rowcolor{gray}
+                            & analog            & Abtastung                 & digital \\
+            Zeit            & $t[s]$            & $\frac{1}{T_s}[sample/s]$ & $n[sample]$ \\
+            Periode         & $T[s/cycle]$      & $\frac{1}{T_s}[sample/s]$ & $\frac{T}{T_s}[sample/cycle]$ \\
+            Frequenz        & $f[cycle/s = Hz]$ & $\frac{1}{f_s}[s/sample]$ & $\frac{f}{f_s}[cycle/sample]$ \\
+            Kreisfrequenz   & $f[rad/s]$        & $\frac{1}{f_s}[s/sample]$ & $\frac{f}{f_s}[rad/sample = \Omega = 2 \pi \frac{f}{f_s}]$ \\
+        \end{zebratabular}
+        \caption{Übergang Analog $\to$ Digital}
+        \label{tab:a/d}
+    \end{table}
+\end{document}
+
