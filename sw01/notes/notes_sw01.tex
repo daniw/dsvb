@@ -34,5 +34,13 @@ Länge der linearen Korrelation:
 \section{Faltung}
 Länge der Faltung
 \[ \boxed{0 \leq n \leq N_x + N_y - 2} \]
-\end{document}
 
+\section{Modulation Property DFT $\hat{=}$ Amplituden-Modulation}
+\[ x[n] \cdot \cos[\omega_0 n] \laplace 
+\frac{1}{2} \left(X(\omega + \omega_0) + X(\omega - \omega_0)\right) \]
+\[ \cos[\omega_0 n] = \cos\left[2 \pi \frac{f_0}{f_s} n\right] \]
+\[ \boxed{f_0 = \frac{f_s}{2}} \to = \cos[\pi \cdot n] = (-1)^n \]
+
+\section{Frequenzen bei Abtastung}
+\[ f_n = k \cdot f_s \pm f_1 \qquad k \in \mathbb{Z} \]
+\end{document}
