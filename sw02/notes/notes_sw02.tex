@@ -1,0 +1,48 @@
+\documentclass[a4,paper,fleqn]{article}
+
+\usepackage{../../layout/layout}
+
+\title{Notizen DSVB -- SW02}
+\date{\today}
+\author{Daniel Winz}
+
+\begin{document}
+\maketitle
+\clearpage
+
+\section{Quantisierungsmodell}
+\[ SNR_{\si{\deci\bel}} = 10 \cdot \log_{10} = \left(\frac{P_X}{P_\epsilon}\right) = 6 \cdot W + \delta \approx 6 \cdot W \]
+\begin{itemize}
+    \item Nutzsignal harmonisches Sinussignal
+    \item Nutzsignal vollständig ausgesteuert
+\end{itemize}
+$\to$ Mit jedem zusätzlichen Bit wird der Signal-Rausch-Abstand um 6\si{\deci\bel} erhöht. 
+
+\section{Matlab Befehle}
+\begin{table}[h!]
+    \begin{zebratabular}{ll}
+        \rowcolor{gray} Befehl & Funktion \\
+        \verb!load(spf1);! & Variable spf1 laden \\
+        \verb!sound(spf1);! & Daten abspielen \\
+        \verb!sound(spf1,Fs);! & Daten abspielen mit Abtastrate \verb!Fs! \\
+    \end{zebratabular}
+\end{table}
+
+\section{Quantisierung in Matlab}
+\begin{tabular}{ccc}
+$x[n]$   & \verb!X.XXXXXX!                 & $[-1,+1)$ \\\\
+         & $\Downarrow \cdot 2^{(W - 1)}$  & \\\\
+         & \verb!XXXX.XXX!                 & $[-1,+1)$ \\\\
+         & $\Downarrow$ \verb!round()!     & \\\\
+         & \verb!XXXX.   !                 & $[-1,+1)$ \\\\
+         & $\Downarrow \cdot 2^{-(W - 1)}$ & \\\\
+$X_q[n]$ & \verb!X.XXX   !                 & $[-1,+1)$ \\\\
+\end{tabular}
+
+\section{Runden in Matlab}
+\verb!ceil! $\rightarrow$ $\rightarrow$ \\
+\verb!floor! $\leftarrow$ $\leftarrow$ \\
+\verb!round! $\leftarrow$ $\rightarrow$ \\
+\verb!fix! $\rightarrow$ $\leftarrow$ \\
+
+\end{document}
