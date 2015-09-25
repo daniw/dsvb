@@ -85,4 +85,13 @@ $X_q[n]$ & \verb!X.XXX   !                 & $[-1,+1)$ \\\\
     \end{minipage}
 \end{figure}
 
+\section{DFT}
+\[ \cos(2 \pi \cdot \underbrace{f}_{k \cdot \frac{f_s}{N}} \cdot \underbrace{t}_{n \cdot T_s}) \]
+\[ \cos\left(2 \pi \cdot \frac{k}{N} \cdot n\right) \]
+
+\section{DFT als Korrelation}
+\[ X[k] = 
+        \sum\limits_{n = 0}^{N} x[n] \cdot     \cos\left(2 \pi \cdot n \cdot \frac{k}{N}\right) + 
+j \cdot \sum\limits_{n = 0}^{N} x[n] \cdot (-1)\sin\left(2 \pi \cdot n \cdot \frac{k}{N}\right) + 
+\]
 \end{document}
