@@ -1,0 +1,21 @@
+\documentclass[a4,paper,fleqn]{article}
+
+\usepackage{../../layout/layout}
+
+\title{Notizen DSVB -- SW03}
+\date{\today}
+\author{Daniel Winz}
+
+\begin{document}
+\maketitle
+\clearpage
+
+\section{FFT}
+DFT: 
+\[ [N^2]_{mult} + [N^2 - N] _{add} \]
+FFT: 
+\[ [\frac{N}{2} \cdot \log_2(N)]_{mult} + [N \cdot \log_2(N)] _{add} \]
+Beschleunigungsfaktor: 
+\[ \frac{8 N - 2}{5 \log_2(N)} \]
+
+\end{document}
