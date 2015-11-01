@@ -17,29 +17,44 @@
 
 \subsection{Q1}
 \label{q1}
-\emph{Why is the product of two values in Q15-format (short int) in function 
-}\verb?goertzel_filter_v0?\emph{ scaled by 14 instead of 15 bits?}\\
-Die verwendeten Koeffizienten für den Goertzelalgorithmus sind bereits 
-$\frac{a}{2}$. 
-
+\emph{Weshalb wird das Produkt der zwei Werte im Q15-Format}
+\verb?(short int)?
+\emph{in der Funktion}
+\verb?goertzel_filter_v0?
+\emph{mit 14 anstelle von 15 Bit skaliert? }
+\paragraph{Lösung: }
+Die verwendeten Koeffizienten für den Goertzelalgorithmus sind $\frac{a}{2}$. 
+Die Multiplikation mit wird mit dem reduzierten Schiebebefehl realisiert. 
+Dadurch kann Rechenaufwand gespart werden. 
 \subsection{Q2}
 \label{q2}
-\emph{Why does v1 not only saves storage but also reduces the computation 
-time?}\\
+\emph{Warum spart}
+\verb?v1?
+\emph{nicht nur Speicher, sondern reduziert auch die 
+Berechnungszeit?}
+\paragraph{Lösung: }
 Lokale Variable \verb?sum? anstelle von globaler Variable \verb?delay[0]?. Der 
 Compiler kann diese in einem CPU Register anlegen. Damit kann die Zugriffszeit 
 reduziert werden. 
 
 \subsection{Q3}
 \label{q3}
-\emph{Starting from formula (4.47) in the script, show analytically that the 
-method used to calculate signal power in function 
-}\verb?goertzel_output_power_v0?\emph{ is identical to the one shown in Figure 
-4.17, except the final scaling factor} $\frac{2}{N^2}$.\\
+\emph{Ausgehend von der Gleichung (4.47) im Skript, zeige analytisch, dass die 
+in der Funktion}
+\verb?goertzel_output_power_v0?
+\emph{verwendete Methode um die Signalleistung zu berechnen identisch zur 
+Methode in Abbildung 4.17 ist, abgesehen vom endgültigen Skalierungsfaktor}
+$\frac{2}{N^2}$.
+\paragraph{Lösung: }
 
 \subsection{Q4}
 \label{q4}
-\emph{Compare power calculation methods v0 and v1 w.r.t. computational effort 
-and numerical robustness. Which version would you prefer?}\\
+\emph{Vergleichen Sie die Methoden zur Leistungsberechnung}
+\verb?v0?
+\emph{und}
+\verb?v1?
+\emph{bezüglich Rechenaufwand und numerischer Robustheit. Welche Version 
+würden Sie bevorzugen?}
+\paragraph{Lösung: }
 
 \end{document}
