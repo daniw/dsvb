@@ -46,6 +46,71 @@ in der Funktion}
 Methode in Abbildung 4.17 ist, abgesehen vom endgültigen Skalierungsfaktor}
 $\frac{2}{N^2}$.
 \paragraph{Lösung: }
+Gleichung (4.47):
+\[
+    P_k =
+    \frac{2}{N^2} \cdot
+    \left(
+        \Re(Y[k])^2 + \Im(Y[k])^2
+    \right)
+    \qquad (4.47)
+\]
+\[
+    P_k =
+    \frac{2}{N^2} \cdot
+    \left|
+        Y[k]
+    \right|^2
+\]
+\[
+    y_k[n] |_{n = N} = X[k]
+\]
+???
+\[
+    P_k =
+    \frac{2}{N^2} \cdot
+    \left|
+        y_k[n]
+    \right|^2
+\]
+\[
+    y_k[N] = s[n] - {W_N}^{k} \cdot s[n-1]
+\]
+\[
+    P_k =
+    \frac{2}{N^2} \cdot
+    \left|
+        s[n] - {W_N}^{k} \cdot s[n-1]
+    \right|^2
+\]
+\[
+    P_k =
+    \frac{2}{N^2} \cdot
+    \left(
+        s^2[n] +
+        {W_N}^{2k} \cdot s^2[n-1] -
+        2 \cdot {W_N}^{k} \cdot s[n] \cdot s[n-1]
+    \right)
+\]
+\[
+    P_k =
+    \frac{2}{N^2} \cdot
+    \left(
+        s^2[n] +
+        e^{-\frac{4 \pi j k}{N}} \cdot s^2[n-1] -
+        2 \cdot e^{-\frac{2 \pi j k}{N}} \cdot s[n] \cdot s[n-1]
+    \right)
+\]
+???
+\[
+    P_k =
+    \frac{2}{N^2} \cdot
+    \left(
+        s^2[n]
+        + s^2[n-1]
+        - s[n] \cdot s[n-1]
+    \right)
+\]
 
 \subsection{Q4}
 \label{q4}
