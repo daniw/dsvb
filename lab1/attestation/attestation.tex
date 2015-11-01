@@ -1,0 +1,45 @@
+\documentclass[a4,paper,fleqn]{article}
+
+\usepackage{../../layout/layout}
+
+\title{DSVB -- Testat}
+\date{\today}
+\author{Daniel Winz\\Yves Studer}
+
+\fancyhead[R]{Daniel Winz\\Yves Studer} % Kopfzeile rechts
+\fancyfoot[L]{Testat DSVB}       % Fusszeile links
+
+\begin{document}
+\maketitle
+\clearpage
+
+\section{Fragen}
+
+\subsection{Q1}
+\label{q1}
+\emph{Why is the product of two values in Q15-format (short int) in function 
+}\verb?goertzel_filter_v0?\emph{ scaled by 14 instead of 15 bits?}\\
+Die verwendeten Koeffizienten für den Goertzelalgorithmus sind bereits 
+$\frac{a}{2}$. 
+
+\subsection{Q2}
+\label{q2}
+\emph{Why does v1 not only saves storage but also reduces the computation 
+time?}\\
+Lokale Variable \verb?sum? anstelle von globaler Variable \verb?delay[0]?. Der 
+Compiler kann diese in einem CPU Register anlegen. Damit kann die Zugriffszeit 
+reduziert werden. 
+
+\subsection{Q3}
+\label{q3}
+\emph{Starting from formula (4.47) in the script, show analytically that the 
+method used to calculate signal power in function 
+}\verb?goertzel_output_power_v0?\emph{ is identical to the one shown in Figure 
+4.17, except the final scaling factor} $\frac{2}{N^2}$.\\
+
+\subsection{Q4}
+\label{q4}
+\emph{Compare power calculation methods v0 and v1 w.r.t. computational effort 
+and numerical robustness. Which version would you prefer?}\\
+
+\end{document}
