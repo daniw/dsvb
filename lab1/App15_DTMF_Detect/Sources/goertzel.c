@@ -182,18 +182,16 @@ short int goertzel_output_power_v0( short int * delay, short int coefficient)
 short int goertzel_output_power_v1(short int * delay, short int b_RE, short int b_IM)
 {
 	signed int goertzel_power;
-    signed long y_real;
-    signed long y_imag;
-    signed long prod_real;
-    signed long prod_imag;
+    signed long real;
+    signed long imag;
 
-    y_real = ( (long) delay[1] * b_RE) >> 14 + delay[0];
-    y_imag = ( (long) delay[1] * b_IM) >> 14;
+    real = ( (long) delay[1] * b_RE) >> 14 + delay[0];
+    imag = ( (long) delay[1] * b_IM) >> 14;
 
-    prod_real = y_real * y_real;
-    prod_imag = y_imag * y_imag;
+    real = real * real;
+    imag = imag * imag;
 
-	goertzel_power = (short int) ((prod_real + prod_imag) >> 16);
+	goertzel_power = (short int) ((real + imag) >> 16);
 
     /* Re-initialize delay. Also useful in event of instability */
 	delay[1] = 0;
