@@ -15,7 +15,7 @@ goertzel = [
 
 a_coeff = goertzel(:,2) * 2^15
 
-N = 4000
+N = 8000
 k = [
     697;
     770;
@@ -27,5 +27,5 @@ k = [
     1633
 ]
 
-wnk = exp(-i.*2.*pi./N*k)
+wnk = -exp(-i.*2.*pi.*k/N)
 xmk_q15 = wnk * 2^15

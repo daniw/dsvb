@@ -79,23 +79,23 @@
 // @ToDo 4:
 // Define coefficients for "calculate_goertzel_output_power_v1"
 // The values here correspond to real/imag part of twiddle factor W_N^k in Q15 format
- #define b_RE_697_Hz   15014
- #define b_RE_770_Hz   11583
- #define b_RE_852_Hz    7549 // 7549.4
- #define b_RE_941_Hz    3033 // 3032.5
- #define b_RE_1209_Hz -10565
- #define b_RE_1336_Hz -16503
- #define b_RE_1477_Hz -22318
- #define b_RE_1633_Hz -27472
+ #define b_RE_697_Hz  -27980
+ #define b_RE_770_Hz  -26956
+ #define b_RE_852_Hz  -25701
+ #define b_RE_941_Hz  -24219
+ #define b_RE_1209_Hz -19073
+ #define b_RE_1336_Hz -16325
+ #define b_RE_1477_Hz -13085
+ #define b_RE_1633_Hz  -9315 // 9314.8
 
- #define b_IM_697_Hz  -29126
- #define b_IM_770_Hz  -30653
- #define b_IM_852_Hz  -31886
- #define b_IM_941_Hz  -32627
- #define b_IM_1209_Hz -31018
- #define b_IM_1336_Hz -28309
- #define b_IM_1477_Hz -23992
- #define b_IM_1633_Hz -17861
+ #define b_IM_697_Hz  17055
+ #define b_IM_770_Hz  18631
+ #define b_IM_852_Hz  20327
+ #define b_IM_941_Hz  22072
+ #define b_IM_1209_Hz 26645
+ #define b_IM_1336_Hz 28412
+ #define b_IM_1477_Hz 30042
+ #define b_IM_1633_Hz 31416
 
  /* The following are the bit masks corresponding to each button push */
  #define BUTTON_1    0x0011
