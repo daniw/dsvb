@@ -120,7 +120,7 @@ Gleichung (4.47):
 \[
  = s[n]^2 - 2\cos\left(\frac{2\pi \cdot f_k}{f_s}\right)\cdot s[n]\cdot s[n-1] + s^2[n-1]
 \]
-Diese Formel ist im Goerzel v0 implementiert.
+Diese Formel ist in \verb?goertzel_output_power_v0? implementiert.
 %\[
 %    P_k =
 %    \frac{2}{N^2} \cdot
@@ -187,6 +187,10 @@ Diese Formel ist im Goerzel v0 implementiert.
 \emph{bezüglich Rechenaufwand und numerischer Robustheit. Welche Version 
 würden Sie bevorzugen?}
 \paragraph{Lösung: }
+Die Anzahl Multiplikationen (4) und die Anzahl Additionen (2) ist in v0 und v1 
+identisch. In v0 wird zwei mal geschoben, in v1 drei mal. Daher ist v1 ein 
+wenig rechenaufwändiger. 
+
 Da in Version 0  weniger multipliziert und geschoben wird als in Version 1, ist Version 0 schneller und robuster.
 
 \end{document}
