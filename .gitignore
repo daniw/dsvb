@@ -2,3 +2,6 @@ ilias/
 ilias_copy/
 
 *.swp
+lab1/attestation/attestation.synctex.gz
+*.aux
+*.out

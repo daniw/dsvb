@@ -97,61 +97,86 @@ Gleichung (4.47):
     \qquad (4.47)
 \]
 \[
-    P_k =
-    \frac{2}{N^2} \cdot
-    \left|
-        Y[k]
-    \right|^2
+\Re(X[k]) = \Re(s[n] - W^k_N \cdot s[n-1])
 \]
 \[
-    y_k[n] |_{n = N} = X[k]
-\]
-???
-\[
-    P_k =
-    \frac{2}{N^2} \cdot
-    \left|
-        y_k[n]
-    \right|^2
+\Re(X[k]) = s[n] - \cos\left(-\frac{2 \pi\cdot f_k}{f_s}\right)\cdot s[n-1]
 \]
 \[
-    y_k[N] = s[n] - {W_N}^{k} \cdot s[n-1]
+\Im(X[k]) = \Im(s[n] - W^k_N \cdot s[n-1])
 \]
 \[
-    P_k =
-    \frac{2}{N^2} \cdot
-    \left|
-        s[n] - {W_N}^{k} \cdot s[n-1]
-    \right|^2
+\Im(X[k]) = -\sin\left(-\frac{2 \pi\cdot f_k}{f_s}\right)\cdot s[n-1]
 \]
 \[
-    P_k =
-    \frac{2}{N^2} \cdot
-    \left(
-        s^2[n] +
-        {W_N}^{2k} \cdot s^2[n-1] -
-        2 \cdot {W_N}^{k} \cdot s[n] \cdot s[n-1]
-    \right)
+        \Re(Y[k])^2 + \Im(Y[k])^2 = \left(s[n] - \cos\left(-\frac{2 \pi\cdot f_k}{f_s}\right)\cdot s[n-1] \right)^2 + \left( -\sin\left(-\frac{2 \pi\cdot f_k}{f_s}\right)\cdot s[n-1]\right)^2
 \]
 \[
-    P_k =
-    \frac{2}{N^2} \cdot
-    \left(
-        s^2[n] +
-        e^{-\frac{4 \pi j k}{N}} \cdot s^2[n-1] -
-        2 \cdot e^{-\frac{2 \pi j k}{N}} \cdot s[n] \cdot s[n-1]
-    \right)
+ = s[n]^2 - 2\cos\left(-\frac{2\pi \cdot f_k}{f_s}\right)\cdot s[n]\cdot s[n-1] + \cos^2\left(-\frac{2\pi\cdot f_k}{f_s}\right)\cdot s^2[n-1] + \sin^2\left(-\frac{2\pi\cdot f_k}{f_s}\right)\cdot c^2[n-1]
 \]
-???
 \[
-    P_k =
-    \frac{2}{N^2} \cdot
-    \left(
-        s^2[n]
-        + s^2[n-1]
-        - s[n] \cdot s[n-1]
-    \right)
+ = s[n]^2 - 2\cos\left(-\frac{2\pi \cdot f_k}{f_s}\right)\cdot s[n]\cdot s[n-1] + s^2[n-1]
 \]
+\[
+ = s[n]^2 - 2\cos\left(\frac{2\pi \cdot f_k}{f_s}\right)\cdot s[n]\cdot s[n-1] + s^2[n-1]
+\]
+Diese Formel ist im Goerzel v0 implementiert.
+%\[
+%    P_k =
+%    \frac{2}{N^2} \cdot
+%    \left|
+%        Y[k]
+%    \right|^2
+%\]
+%\[
+%    y_k[n] |_{n = N} = X[k]
+%\]
+%???
+%\[
+%    P_k =
+%    \frac{2}{N^2} \cdot
+%    \left|
+%        y_k[n]
+%    \right|^2
+%\]
+%\[
+%    y_k[N] = s[n] - {W_N}^{k} \cdot s[n-1]
+%\]
+%\[
+%    P_k =
+%    \frac{2}{N^2} \cdot
+%    \left|
+%        s[n] - {W_N}^{k} \cdot s[n-1]
+%    \right|^2
+%\]
+%\[
+%    P_k =
+%    \frac{2}{N^2} \cdot
+%    \left(
+%        s^2[n] +
+%        {W_N}^{2k} \cdot s^2[n-1] -
+%        2 \cdot {W_N}^{k} \cdot s[n] \cdot s[n-1]
+%    \right)
+%\]
+%\[
+%    P_k =
+%    \frac{2}{N^2} \cdot
+%    \left(
+%        s^2[n] +
+%%        e^{-\frac{4 \pi j k}{N}} \cdot s^2[n-1] -
+%        2 \cdot e^{-\frac{2 \pi j k}{N}} \cdot s[n] \cdot s[n-1]
+%    \right)
+%\]
+%???
+%\[
+%    P_k =
+%    \frac{2}{N^2} \cdot
+%    \left(
+%        s^2[n]
+%        + s^2[n-1]
+%        - s[n] \cdot s[n-1]
+%    \right)
+%\]
 
 \subsection{Q4}
 \label{q4}
