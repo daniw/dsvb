@@ -14,7 +14,6 @@ goertzel = [
 ]
 
 a_coeff = goertzel(:,2) * 2^15
-a_coeff2 = goertzel(:,2) * 2^14
 
 N = 4000
 k = [
